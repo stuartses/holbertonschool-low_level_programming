@@ -1,7 +1,9 @@
-/*
- * 4. Hello, puts
- * This Will display the text and 0 output
+/**
+ * main - Initializes 
+ * Description: 4. Hello, puts
+ * Return: Output always 0
  */
+
 #include <stdio.h>
 
 int main(void)
