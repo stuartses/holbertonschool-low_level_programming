@@ -1,9 +1,9 @@
 /**
- * 4. Hello, puts
+ * main - 4. Hello, puts
  * Display a text
  *
  * Return: 0
- */
+*/
 #include <stdio.h>
 
 int main(void)
