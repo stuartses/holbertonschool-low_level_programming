@@ -1,3 +1,7 @@
+/*
+ * 4. Hello, puts
+ */
+
 #include <stdio.h>
 int main(void)
 {
