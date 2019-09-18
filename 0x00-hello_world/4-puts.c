@@ -1,9 +1,8 @@
 /**
- * main - Initializes 
- * Description: 4. Hello, puts
- * Return: Output always 0
+ * main - print a string using puts
+ * 
+ * Return: Always 0 (Success)
  */
-
 #include <stdio.h>
 
 int main(void)
