@@ -1,7 +1,8 @@
 /**
- * main - print a string using puts
+ * 4. Hello, puts
+ * Display a text
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 #include <stdio.h>
 
