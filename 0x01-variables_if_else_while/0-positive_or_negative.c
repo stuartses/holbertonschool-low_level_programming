@@ -1,9 +1,16 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
+
 /* more headers goes there */
+#include <stdio.h>
 
 /* betty style doc for function main goes there */
+/**
+  * main - 0. Positive anything is better than negative nothing
+  * Print if n is negative, positive or zero.
+  * Return: 0
+  */
+
 int main(void)
 {
 	int n;
