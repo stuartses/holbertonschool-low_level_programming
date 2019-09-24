@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _islower - Say if a char is lowercase or uppercase
+ * _isalpha - Say if a char is lowercase or uppercase
  * @c: the input
  *
  * Description: if the input is lowercase or uppercase prints "1"
