@@ -2,4 +2,4 @@
   Declaration of functions
  */
 int _putchar(char c);
-int _abs(int x);
+int print_last_digit(int x);
