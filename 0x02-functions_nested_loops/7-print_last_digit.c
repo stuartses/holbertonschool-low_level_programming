@@ -2,7 +2,7 @@
 /**
  * print_last_digit - print the last digit of a number
  * @x: the input
- * Description: get the last digit of x: y = print_last_digit(x)
+ * Description: get the last digit of x
  * Return: y the last digit
  */
 
