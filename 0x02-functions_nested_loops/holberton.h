@@ -15,5 +15,6 @@ int _abs(int x);
 int print_last_digit(int x);
 void jack_bauer(void);
 void print_to_98(int n);
+void times_table(void);
 
 #endif /* HOLBERTON_H */
