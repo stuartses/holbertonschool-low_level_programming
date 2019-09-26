@@ -1,7 +1,6 @@
 #include "holberton.h"
 /**
  * times_table - prints 9 times table
- *
  * Description: prints all times tables begining with 0
  */
 
@@ -14,25 +13,26 @@ void times_table(void)
 		for (j = 0; j <= 9; j++)
 		{
 			y = i * j;
-			if (y < 10)
+			if (y < 10 && j != 9)
 			{
 				_putchar(y + '0');
-				if (j != 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 			}
-			if (y >= 10)
+			if (y >= 10 && j != 9)
 			{
 				_putchar((y / 10) + '0');
 				_putchar((y % 10) + '0');
-				if (j != 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
+				_putchar(',');
+				_putchar(' ');
+			}
+			if (y < 10 && j == 9)
+				_putchar(y + '0');
+			else if (y >= 10 && j == 9)
+			{
+				_putchar((y / 10) + '0');
+				_putchar((y % 10) + '0');
 			}
 		}
 		_putchar('\n');
