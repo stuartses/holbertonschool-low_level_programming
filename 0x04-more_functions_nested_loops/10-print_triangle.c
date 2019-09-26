@@ -13,16 +13,23 @@ void print_triangle(int size)
 	/* punter */
 	punter = size - 1;
 
-	for (i = 0; i < size; i++)
+	if (size > 0)
 	{
-		for (j = 0; j < size; j++)
+		for (i = 0; i < size; i++)
 		{
-			if (j >= punter)
-				_putchar('#');
-			else
-				_putchar(' ');
+			for (j = 0; j < size; j++)
+			{
+				if (j >= punter)
+					_putchar('#');
+				else
+					_putchar(' ');
+			}
+			_putchar('\n');
+			punter--;
 		}
+	}
+	else
+	{
 		_putchar('\n');
-		punter--;
 	}
 }
