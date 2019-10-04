@@ -10,24 +10,24 @@
 
 char _to_upper(char c)
 {
-        int lowercase[26], uppercase[26], i;
-        int ini_lower = 97, ini_upper = 65;
+	int lowercase[26], uppercase[26], i;
+	int ini_lower = 97, ini_upper = 65;
 
-        /* generate array with Alphabet */
-        for (i = 0; i < 26; i++, ini_lower++, ini_upper++)
-        {
-                lowercase[i] = ini_lower;
-                uppercase[i] = ini_upper;
-        }
+/* generate array with Alphabet */
+	for (i = 0; i < 26; i++, ini_lower++, ini_upper++)
+	{
+		lowercase[i] = ini_lower;
+		uppercase[i] = ini_upper;
+	}
 
-        /* sequence the input array */
-        for (i = 0; i < 26; i++)
+/* sequence the input array */
+	for (i = 0; i < 26; i++)
 	{
 		if (c == lowercase[i])
 			c = uppercase[i];
 
-        }
-        return (c);
+	}
+	return (c);
 }
 
 
@@ -51,7 +51,7 @@ char *cap_string(char *str)
 	{
 		for (i = 0; i < 13; i++)
 		{
-			if(str[j - 1] == separators[i]
+			if (str[j - 1] == separators[i]
 			   && str[j] != separators[i])
 			{
 				str[j] = _to_upper(str[j]);
