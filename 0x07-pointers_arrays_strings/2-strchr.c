@@ -2,7 +2,7 @@
 #include "stdio.h"
 /**
  * _strchr - 2. strchr
- * @s: input string;
+ * @s: input string
  * @c: char wanted
  *
  * Description: function that locates a character in a string
@@ -17,9 +17,7 @@ char *_strchr(char *s, char c)
 	{
 		if (*ph == c)
 			return (ph);
-		else
-			return (NULL);
 		ph++;
 	}
-	return (ph);
+	return (NULL);
 }
