@@ -14,6 +14,7 @@ char *_strpbrk(char *s, char *accept)
 
 	int i, j, len = 0, primero, guardado;
 	char *str;
+
 	str = s;
 
 	for (i = 0; str[i] != '\0'; i++)
