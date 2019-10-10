@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
-int babilon(int b, int x);
+int root_look(int x, int look);
 /**
  * _sqrt_recursion -  natural square root of a number
  * @n: input number
@@ -11,38 +11,34 @@ int babilon(int b, int x);
 
 int _sqrt_recursion(int n)
 {
-	int a, root;
+	int root;
 
 	if (n < 0)
 		return (-1);
 	if (n == 0)
 		return (0);
 
-	a = n;
-	root = babilon(a, n);
+	root = root_look(n, 1);
 
 	return (root);
 }
 
 /**
- * babilon - babilon comparation
- * @b: input value
+ * root_look - find the square root
  * @x: root wanted
+ * @look: root look
  *
  * Description: return sqr(x)
+ * Return: root square
  */
 
-int babilon(int b, int x)
+int root_look(int x, int look)
 {
-	printf("b: %d\n", b);
-	if (b == (x / b))
-		return (b);
-	b = (1 / 2) * ((x / b) + b);
-
-	if (b == 0)
+	if (look == x)
 		return (-1);
-	printf("b': %d\n", b);
-	babilon(b, x);
 
-	return (b);
+	if ((look * look) != x)
+		look = root_look(x, look + 1);
+
+	return (look);
 }
