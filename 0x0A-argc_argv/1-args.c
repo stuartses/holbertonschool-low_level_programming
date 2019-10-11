@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int len = argc - 1;
+
 	printf("%d\n", len);
 	(void)argv;
 
