@@ -1,4 +1,5 @@
 #include "holberton.h"
+int prime_look(int x, int look);
 
 /**
  * prime_look - find the prime number
@@ -24,7 +25,7 @@ int prime_look(int x, int look)
 	return (is_prime);
 }
 
-int prime_look(int x, int look);
+
 /**
  * is_prime_number -  determine if a number is prime
  * @n: input number
