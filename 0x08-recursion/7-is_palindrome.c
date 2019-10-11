@@ -48,6 +48,9 @@ int is_palindrome(char *s)
 	while (s[len] != '\0')
 		len++;
 
+	if (len == 0)
+		return (1);
+
 	if ((len % 2) == 0)
 		len_par = 1;
 	else
