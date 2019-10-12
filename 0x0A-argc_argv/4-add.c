@@ -28,12 +28,11 @@ int main(int argc, char *argv[])
 		}
 		if (error == 0)
 			printf("%d\n", sum);
+		else
+			return (1);
 	}
 	else
-	{
 		printf("%d\n", 0);
-		return (1);
-	}
 
 	return (0);
 }
