@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, a, sum = 0, error = 0;
+	int i, a, sum = 0;
 
 	if (argc > 0)
 	{
@@ -21,15 +21,11 @@ int main(int argc, char *argv[])
 			if (a == 0)
 			{
 				printf("Error\n");
-				error = 1;
-				break;
+				return (1);
 			}
 			sum += a;
 		}
-		if (error == 0)
 			printf("%d\n", sum);
-		else
-			return (1);
 	}
 	else
 		printf("%d\n", 0);
