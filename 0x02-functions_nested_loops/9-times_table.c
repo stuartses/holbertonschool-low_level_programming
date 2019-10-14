@@ -13,24 +13,22 @@ void times_table(void)
 		for (j = 0; j <= 9; j++)
 		{
 			y = i * j;
-			if (y < 10 && j != 9)
+
+			if (j == 0)
 			{
 				_putchar(y + '0');
+			}
+			if (y <= 9 && j != 0)
+			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
+				_putchar(y + '0');
 			}
-			if (y >= 10 && j != 9)
+			if (y > 9 && j != 0)
 			{
-				_putchar((y / 10) + '0');
-				_putchar((y % 10) + '0');
 				_putchar(',');
 				_putchar(' ');
-			}
-			if (y < 10 && j == 9)
-				_putchar(y + '0');
-			else if (y >= 10 && j == 9)
-			{
 				_putchar((y / 10) + '0');
 				_putchar((y % 10) + '0');
 			}
