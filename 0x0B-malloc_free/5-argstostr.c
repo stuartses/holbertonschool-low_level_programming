@@ -44,5 +44,7 @@ char *argstostr(int ac, char **av)
 		om[k] = '\n';
 		k++;
 	}
+	om[k] = '\0';
+
 	return (om);
 }
