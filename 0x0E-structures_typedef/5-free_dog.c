@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * free_dog - free memory of Dog
- * @name: name of Dog
+ * @d: input
  *
  * Description: function that frees dogs
  * Return: void
