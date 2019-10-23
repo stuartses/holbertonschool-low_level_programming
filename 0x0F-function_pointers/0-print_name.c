@@ -1,3 +1,4 @@
+#include <stdlib.h>
 /**
  * print_name - execute function with iput parameters
  * @name: input value tu pass trought function
@@ -8,5 +9,6 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	(*f)(name);
+	if (f != NULL)
+		(*f)(name);
 }
