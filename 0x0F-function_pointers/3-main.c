@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <string.h>
 /**
  * main - program to make mathematics operations
  * @argc: number of input arguments
@@ -9,12 +10,19 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, b, om, (*func)(int, int);
+	int a, b, om, len, (*func)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
+	}
+
+	len = strlen(argv[2]);
+	if (len > 1)
+	{
+		printf("Error\n");
+		exit(99);
 	}
 
 	a = atoi(argv[1]);
