@@ -7,6 +7,7 @@
  * @cmp: function to executes comparation
  *
  * Description: function that searches for an integer
+ * Return: int
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
