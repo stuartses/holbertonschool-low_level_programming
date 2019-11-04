@@ -1,13 +1,13 @@
-/**
- * Project: 0x13. C - More singly linked lists
- * Made by Stuart Echeverry for Holberton Shcool
- */
-
 #ifndef HEADERS
 #define HEADERS
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+/*
+ * Project: 0x13. C - More singly linked lists
+ * Made by Stuart Echeverry for Holberton Shcool
+ */
 
 /**
  * struct listint_s - singly linked list
