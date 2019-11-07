@@ -9,12 +9,14 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int i, dig;
-	unsigned int j = 1, len, sum = 0;
+	unsigned int j = 1, len = 0, sum = 0;
 
 	if (b == NULL)
 		return (0);
 
-	len = strlen(b);
+	while (b[len] != '\0')
+		len++;
+
 	for (i = len - 1; i >= 0; i--)
 	{
 		dig = b[i] - 48;
