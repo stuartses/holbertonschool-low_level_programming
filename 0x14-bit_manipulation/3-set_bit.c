@@ -9,10 +9,9 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int num_bits, mask = 1;
-	int new_number;
+	unsigned int num_bits, mask = 1, new_number;
 
-	num_bits = (8 * sizeof(unsigned int)) - 1;
+	num_bits = (8 * sizeof(unsigned long int)) - 1;
 
 	if (index > num_bits)
 		return (-1);
