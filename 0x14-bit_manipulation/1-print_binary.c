@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_binary - print the binary of a decimal
+ * print_binary - print the binary of a decimal number
  * @n: decimal number
  *
  * Description: function that prints de binary convert of a decimal
@@ -8,12 +8,16 @@
  */
 void print_binary(unsigned long int n)
 {
-	int c, k, print_cod = 0;
+	unsigned long int a, k;
+	int c, print_cod = 0;
+
+	a = (8 * sizeof(unsigned long int)) - 1;
+	c = (int)a;
 
 	if (n == 0)
 		_putchar('0');
 
-	for (c = 31; c >= 0; c--)
+	for (; c >= 0; c--)
 	{
 		k = n >> c;
 
