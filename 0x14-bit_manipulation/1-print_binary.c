@@ -11,10 +11,7 @@ void print_binary(unsigned long int n)
 	int c, k, print_cod = 0;
 
 	if (n == 0)
-	{
 		_putchar('0');
-		return;
-	}
 
 	for (c = 31; c >= 0; c--)
 	{
