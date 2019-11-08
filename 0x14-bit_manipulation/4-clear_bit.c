@@ -9,20 +9,15 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int mask, new_number;
+	unsigned long int mask = 1, new_number, num_bits;
 
-	/*
-	 * creates a mask of the max unsigned long int
-	 * Less -2, makes this has a zero in the last digit
-	 */
-	mask = (8 * sizeof(unsigned long int)) - 2;
+	num_bits = (8 * sizeof(unsigned long int)) - 1;
 
-	if (index > mask)
+	if (index > num_bits)
 		return (-1);
 
-	/* move de zero index position to the left*/
 	mask = mask << index;
-	new_number = mask & *n;
+	new_number = (~mask) & (*n);
 
 	*n = new_number;
 	return (1);
