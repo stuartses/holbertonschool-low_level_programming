@@ -42,7 +42,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (file_w == -1)
 	{
 		free(conte);
-		return(0);
+		return (0);
 	}
 
 	free(conte);
