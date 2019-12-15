@@ -15,9 +15,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	temp = *head;
 
-	if (temp == NULL)
-		return (-1);
-
 	while (temp != NULL)
 	{
 		if (index == 0)
@@ -31,8 +28,15 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (i == index - 1)
 		{
 			delete_node = temp->next;
-			temp->next = delete_node->next;
-			temp->next->prev = temp;
+			if (delete_node != NULL)
+			{
+				temp->next = delete_node->next;
+				temp->next->next->prev = temp;
+			}
+			else
+			{
+				temp->next = NULL;
+			}
 			free(delete_node);
 			return (1);
 		}
