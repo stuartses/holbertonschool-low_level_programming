@@ -1,5 +1,5 @@
 #include "hash_tables.h"
-#include <string.h>
+
 /**
  * hash_table_set - insert new element to array
  * @ht: input ash table
@@ -7,7 +7,7 @@
  * @value: input value
  *
  * Description: insert new element at new index in hash table
- * Return: 1 if success or 0 if fails
+ * Return: 1 on success or 0 if fails
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
