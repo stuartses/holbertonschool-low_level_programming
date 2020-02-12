@@ -17,4 +17,8 @@ void jack_bauer(void);
 void print_to_98(int n);
 void times_table(void);
 
+/* advanced tasks */
+void _putchar_n(int num);
+void print_times_table(int n);
+
 #endif /* HOLBERTON_H */
