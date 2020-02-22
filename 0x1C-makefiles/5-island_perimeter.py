@@ -26,17 +26,39 @@ def island_perimeter(grid):
     # the extrem col and rows are always zero
     for i in range(1, n - 1):
         for j in range(1, m - 1):
-            if grid[i][j] == 1:
-                zone_p = 4
-                if grid[i - 1][j] == 1:
-                    zone_p -= 1
-                if grid[i][j - 1] == 1:
-                    zone_p -= 1
-                if grid[i][j + 1] == 1:
-                    zone_p -= 1
-                if grid[i + 1][j] == 1:
-                    zone_p -= 1
+            zone_p = 4
+            lonely = 0
 
+            if grid[i - 1][j] == 1:
+                zone_p -= 1
+            else:
+                lonely += 1
+
+            if grid[i][j - 1] == 1:
+                zone_p -= 1
+            else:
+                lonely += 1
+
+            if grid[i][j + 1] == 1:
+                zone_p -= 1
+            else:
+                lonely += 1
+
+            if grid[i + 1][j] == 1:
+                zone_p -= 1
+            else:
+                lonely += 1
+
+            # verify if is a lonely island
+            if grid[i][j] == 1 and lonely == 4:
+                return 0
+
+            # verify if is a lake
+            if grid[i][j] == 0 and zone_p == 0:
+                return 0
+
+            # if is a unique island
+            if grid[i][j] == 1:
                 perimeter += zone_p
 
     return perimeter
