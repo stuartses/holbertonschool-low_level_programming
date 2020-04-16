@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * _print_binaryserach - print element of array by binary search
+ * print_array - print element of array by binary search
  * @array: array of integers
  * @left: left limit integer
  * @right: right limit integer
@@ -9,7 +9,7 @@
  * Description: print each element of an array in binary search limits
  * Return: void
  */
-void _print_binaryserach(int *array, size_t left, size_t right)
+void print_array(int *array, size_t left, size_t right)
 {
 	size_t i;
 
@@ -30,20 +30,22 @@ void _print_binaryserach(int *array, size_t left, size_t right)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t l = 0, r = size - 1, mid = 0;
+	size_t left = 0, right = size - 1, middle = 0;
 
 	if (array == NULL)
 		return (-1);
-	while (l <= r)
+
+	while (left <= right)
 	{
-		_print_binaryserach(array, l, r);
-		mid = (l + r) / 2;
-		if (array[mid] < value)
-			l = mid + 1;
-		else if (array[mid] > value)
-			r = mid - 1;
+		print_array(array, left, right);
+		middle = (left + right) / 2;
+		if (array[middle] < value)
+			left = middle + 1;
+		else if (array[middle] > value)
+			right = middle - 1;
 		else
-			return (mid);
+			return (middle);
 	}
+
 	return (-1);
 }
