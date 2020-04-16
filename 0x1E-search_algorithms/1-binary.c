@@ -1,22 +1,18 @@
 #include "search_algos.h"
 
 /**
- * print_array - print element of array by binary search
- * @array: array of integers
- * @left: left limit integer
- * @right: right limit integer
- *
- * Description: print each element of an array in binary search limits
- * Return: void
- */
-void print_array(int *array, size_t left, size_t right)
+  * print_array - print array with limits in l and r
+  * @array: set of numbers
+  * @l: left limit
+  * @r: right limit
+  * Return: nothing
+  */
+void print_array(int *array, size_t l, size_t r)
 {
-	size_t i;
-
-	printf("Seraching in array: ");
-	for (i = left; i < right; i++)
-		printf("%d, ", array[i]);
-	printf("%d\n", array[i]);
+	printf("Searching in array: ");
+	for (l = l; l < r; l++)
+		printf("%d, ", array[l]);
+	printf("%d\n", array[l]);
 }
 
 /**
