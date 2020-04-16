@@ -30,22 +30,20 @@ void _print_binaryserach(int *array, size_t left, size_t right)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t left = 0, right = size - 1, middle = 0;
+	size_t l = 0, r = size - 1, mid = 0;
 
 	if (array == NULL)
 		return (-1);
-
-	while (left <= right)
+	while (l <= r)
 	{
-		_print_binaryserach(array, left, right);
-		middle = (left + right) / 2;
-		if (array[middle] < value)
-			left = middle + 1;
-		else if (array[middle] > value)
-			right = middle - 1;
+		_print_binaryserach(array, l, r);
+		mid = (l + r) / 2;
+		if (array[mid] < value)
+			l = mid + 1;
+		else if (array[mid] > value)
+			r = mid - 1;
 		else
-			return (middle);
+			return (mid);
 	}
-
 	return (-1);
 }
