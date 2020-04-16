@@ -3,18 +3,18 @@
 /**
  * _print_binaryserach - print element of array by binary search
  * @array: array of integers
- * @L: left limit integer
- * @R: right limit integer
+ * @left: left limit integer
+ * @right: right limit integer
  *
  * Description: print each element of an array in binary search limits
  * Return: void
  */
-void _print_binaryserach(int *array, unsigned int L, unsigned int R)
+void _print_binaryserach(int *array, size_t left, size_t right)
 {
-	unsigned int i;
+	size_t i;
 
 	printf("Seraching in array: ");
-	for (i = L; i < R; i++)
+	for (i = left; i < right; i++)
 		printf("%d, ", array[i]);
 	printf("%d\n", array[i]);
 }
@@ -30,24 +30,24 @@ void _print_binaryserach(int *array, unsigned int L, unsigned int R)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	unsigned int L, R, m;
+	size_t left, right, middle;
 
 	if (array == NULL)
 		return (-1);
 
-	L = 0;
-	R = size - 1;
+	left = 0;
+	right = size - 1;
 
-	while (L <= R)
+	while (left <= right)
 	{
-		m = (L + R) / 2;
-		_print_binaryserach(array, L, R);
-		if (array[m] < value)
-			L = m + 1;
-		else if (array[m] > value)
-			R = m - 1;
+		middle = (left + right) / 2;
+		_print_binaryserach(array, left, right);
+		if (array[middle] < value)
+			left = middle + 1;
+		else if (array[middle] > value)
+			right = middle - 1;
 		else
-			return (m);
+			return (middle);
 	}
 
 	return (-1);
