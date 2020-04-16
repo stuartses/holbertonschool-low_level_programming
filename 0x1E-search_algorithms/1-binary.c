@@ -9,9 +9,9 @@
  * Description: print each element of an array in binary search limits
  * Return: void
  */
-void _print_binaryserach(int *array, int L, int R)
+void _print_binaryserach(int *array, unsigned int L, unsigned int R)
 {
-	int i;
+	unsigned int i;
 
 	printf("Seraching in array: ");
 	for (i = L; i < R; i++)
@@ -30,7 +30,7 @@ void _print_binaryserach(int *array, int L, int R)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int L, R, m;
+	unsigned int L, R, m;
 
 	if (array == NULL)
 		return (-1);
